@@ -112,7 +112,7 @@ class Client(object):
                         level=level,
                         account=to_typed_message(account_pb2.Account(
                             id=user_id,
-                            alter_id=12
+                            alter_id=0
                         ))
                     )
                 ))
