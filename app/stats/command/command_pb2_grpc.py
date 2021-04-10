@@ -86,6 +86,7 @@ class StatsService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -94,7 +95,7 @@ class StatsService(object):
             app_dot_stats_dot_command_dot_command__pb2.GetStatsRequest.SerializeToString,
             app_dot_stats_dot_command_dot_command__pb2.GetStatsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def QueryStats(request,
@@ -102,6 +103,7 @@ class StatsService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -110,7 +112,7 @@ class StatsService(object):
             app_dot_stats_dot_command_dot_command__pb2.QueryStatsRequest.SerializeToString,
             app_dot_stats_dot_command_dot_command__pb2.QueryStatsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetSysStats(request,
@@ -118,6 +120,7 @@ class StatsService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -126,4 +129,4 @@ class StatsService(object):
             app_dot_stats_dot_command_dot_command__pb2.SysStatsRequest.SerializeToString,
             app_dot_stats_dot_command_dot_command__pb2.SysStatsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

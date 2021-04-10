@@ -70,6 +70,7 @@ class RoutingService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -78,7 +79,7 @@ class RoutingService(object):
             app_dot_router_dot_command_dot_command__pb2.SubscribeRoutingStatsRequest.SerializeToString,
             app_dot_router_dot_command_dot_command__pb2.RoutingContext.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def TestRoute(request,
@@ -86,6 +87,7 @@ class RoutingService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -94,4 +96,4 @@ class RoutingService(object):
             app_dot_router_dot_command_dot_command__pb2.TestRouteRequest.SerializeToString,
             app_dot_router_dot_command_dot_command__pb2.RoutingContext.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -54,6 +54,7 @@ class LoggerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -62,4 +63,4 @@ class LoggerService(object):
             app_dot_log_dot_command_dot_config__pb2.RestartLoggerRequest.SerializeToString,
             app_dot_log_dot_command_dot_config__pb2.RestartLoggerResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

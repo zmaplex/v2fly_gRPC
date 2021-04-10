@@ -134,6 +134,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -142,7 +143,7 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.AddInboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.AddInboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def RemoveInbound(request,
@@ -150,6 +151,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -158,7 +160,7 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.RemoveInboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.RemoveInboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def AlterInbound(request,
@@ -166,6 +168,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -174,7 +177,7 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.AlterInboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.AlterInboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def AddOutbound(request,
@@ -182,6 +185,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -190,7 +194,7 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.AddOutboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.AddOutboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def RemoveOutbound(request,
@@ -198,6 +202,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -206,7 +211,7 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.RemoveOutboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.RemoveOutboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def AlterOutbound(request,
@@ -214,6 +219,7 @@ class HandlerService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -222,4 +228,4 @@ class HandlerService(object):
             app_dot_proxyman_dot_command_dot_command__pb2.AlterOutboundRequest.SerializeToString,
             app_dot_proxyman_dot_command_dot_command__pb2.AlterOutboundResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

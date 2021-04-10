@@ -54,6 +54,7 @@ class GunService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -62,4 +63,4 @@ class GunService(object):
             transport_dot_internet_dot_grpc_dot_encoding_dot_stream__pb2.Hunk.SerializeToString,
             transport_dot_internet_dot_grpc_dot_encoding_dot_stream__pb2.Hunk.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
