@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n+com.v2ray.core.transport.internet.websocketP\001Z;github.com/v2fly/v2ray-core/v4/transport/internet/websocket\252\002\'V2Ray.Core.Transport.Internet.Websocket',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n)transport/internet/websocket/config.proto\x12\'v2ray.core.transport.internet.websocket\"$\n\x06Header\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xb4\x01\n\x06\x43onfig\x12\x0c\n\x04path\x18\x02 \x01(\t\x12?\n\x06header\x18\x03 \x03(\x0b\x32/.v2ray.core.transport.internet.websocket.Header\x12\x1d\n\x15\x61\x63\x63\x65pt_proxy_protocol\x18\x04 \x01(\x08\x12\x16\n\x0emax_early_data\x18\x05 \x01(\x05\x12\x1e\n\x16use_browser_forwarding\x18\x06 \x01(\x08J\x04\x08\x01\x10\x02\x42\x96\x01\n+com.v2ray.core.transport.internet.websocketP\x01Z;github.com/v2fly/v2ray-core/v4/transport/internet/websocket\xaa\x02\'V2Ray.Core.Transport.Internet.Websocketb\x06proto3'
+  serialized_pb=b'\n)transport/internet/websocket/config.proto\x12\'v2ray.core.transport.internet.websocket\"$\n\x06Header\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd4\x01\n\x06\x43onfig\x12\x0c\n\x04path\x18\x02 \x01(\t\x12?\n\x06header\x18\x03 \x03(\x0b\x32/.v2ray.core.transport.internet.websocket.Header\x12\x1d\n\x15\x61\x63\x63\x65pt_proxy_protocol\x18\x04 \x01(\x08\x12\x16\n\x0emax_early_data\x18\x05 \x01(\x05\x12\x1e\n\x16use_browser_forwarding\x18\x06 \x01(\x08\x12\x1e\n\x16\x65\x61rly_data_header_name\x18\x07 \x01(\tJ\x04\x08\x01\x10\x02\x42\x96\x01\n+com.v2ray.core.transport.internet.websocketP\x01Z;github.com/v2fly/v2ray-core/v4/transport/internet/websocket\xaa\x02\'V2Ray.Core.Transport.Internet.Websocketb\x06proto3'
 )
 
 
@@ -107,6 +107,13 @@ _CONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='early_data_header_name', full_name='v2ray.core.transport.internet.websocket.Config.early_data_header_name', index=5,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -120,7 +127,7 @@ _CONFIG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=125,
-  serialized_end=305,
+  serialized_end=337,
 )
 
 _CONFIG.fields_by_name['header'].message_type = _HEADER

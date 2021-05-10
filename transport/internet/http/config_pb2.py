@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from transport.internet.headers.http import config_pb2 as transport_dot_internet_dot_headers_dot_http_dot_config__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n&com.v2ray.core.transport.internet.httpP\001Z6github.com/v2fly/v2ray-core/v4/transport/internet/http\252\002\"V2Ray.Core.Transport.Internet.Http',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n$transport/internet/http/config.proto\x12\"v2ray.core.transport.internet.http\"$\n\x06\x43onfig\x12\x0c\n\x04host\x18\x01 \x03(\t\x12\x0c\n\x04path\x18\x02 \x01(\tB\x87\x01\n&com.v2ray.core.transport.internet.httpP\x01Z6github.com/v2fly/v2ray-core/v4/transport/internet/http\xaa\x02\"V2Ray.Core.Transport.Internet.Httpb\x06proto3'
-)
+  serialized_pb=b'\n$transport/internet/http/config.proto\x12\"v2ray.core.transport.internet.http\x1a,transport/internet/headers/http/config.proto\"x\n\x06\x43onfig\x12\x0c\n\x04host\x18\x01 \x03(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x0e\n\x06method\x18\x03 \x01(\t\x12\x42\n\x06header\x18\x04 \x03(\x0b\x32\x32.v2ray.core.transport.internet.headers.http.HeaderB\x87\x01\n&com.v2ray.core.transport.internet.httpP\x01Z6github.com/v2fly/v2ray-core/v4/transport/internet/http\xaa\x02\"V2Ray.Core.Transport.Internet.Httpb\x06proto3'
+  ,
+  dependencies=[transport_dot_internet_dot_headers_dot_http_dot_config__pb2.DESCRIPTOR,])
 
 
 
@@ -47,6 +49,20 @@ _CONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='method', full_name='v2ray.core.transport.internet.http.Config.method', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='header', full_name='v2ray.core.transport.internet.http.Config.header', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -59,10 +75,11 @@ _CONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=76,
-  serialized_end=112,
+  serialized_start=122,
+  serialized_end=242,
 )
 
+_CONFIG.fields_by_name['header'].message_type = transport_dot_internet_dot_headers_dot_http_dot_config__pb2._HEADER
 DESCRIPTOR.message_types_by_name['Config'] = _CONFIG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

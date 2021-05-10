@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\031com.v2ray.core.app.routerP\001Z)github.com/v2fly/v2ray-core/v4/app/router\252\002\025V2Ray.Core.App.Router',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x61pp/router/config.proto\x12\x15v2ray.core.app.router\x1a\x15\x63ommon/net/port.proto\x1a\x18\x63ommon/net/network.proto\"\x8d\x02\n\x06\x44omain\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".v2ray.core.app.router.Domain.Type\x12\r\n\x05value\x18\x02 \x01(\t\x12:\n\tattribute\x18\x03 \x03(\x0b\x32\'.v2ray.core.app.router.Domain.Attribute\x1aR\n\tAttribute\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x14\n\nbool_value\x18\x02 \x01(\x08H\x00\x12\x13\n\tint_value\x18\x03 \x01(\x03H\x00\x42\r\n\x0btyped_value\"2\n\x04Type\x12\t\n\x05Plain\x10\x00\x12\t\n\x05Regex\x10\x01\x12\n\n\x06\x44omain\x10\x02\x12\x08\n\x04\x46ull\x10\x03\"\"\n\x04\x43IDR\x12\n\n\x02ip\x18\x01 \x01(\x0c\x12\x0e\n\x06prefix\x18\x02 \x01(\r\"_\n\x05GeoIP\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12)\n\x04\x63idr\x18\x02 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDR\x12\x15\n\rreverse_match\x18\x03 \x01(\x08\"8\n\tGeoIPList\x12+\n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\"N\n\x07GeoSite\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12-\n\x06\x64omain\x18\x02 \x03(\x0b\x32\x1d.v2ray.core.app.router.Domain\"<\n\x0bGeoSiteList\x12-\n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x1e.v2ray.core.app.router.GeoSite\"\xb8\x05\n\x0bRoutingRule\x12\r\n\x03tag\x18\x01 \x01(\tH\x00\x12\x17\n\rbalancing_tag\x18\x0c \x01(\tH\x00\x12-\n\x06\x64omain\x18\x02 \x03(\x0b\x32\x1d.v2ray.core.app.router.Domain\x12-\n\x04\x63idr\x18\x03 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDRB\x02\x18\x01\x12+\n\x05geoip\x18\n \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\x12\x38\n\nport_range\x18\x04 \x01(\x0b\x32 .v2ray.core.common.net.PortRangeB\x02\x18\x01\x12\x32\n\tport_list\x18\x0e \x01(\x0b\x32\x1f.v2ray.core.common.net.PortList\x12<\n\x0cnetwork_list\x18\x05 \x01(\x0b\x32\".v2ray.core.common.net.NetworkListB\x02\x18\x01\x12\x30\n\x08networks\x18\r \x03(\x0e\x32\x1e.v2ray.core.common.net.Network\x12\x34\n\x0bsource_cidr\x18\x06 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDRB\x02\x18\x01\x12\x32\n\x0csource_geoip\x18\x0b \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\x12\x39\n\x10source_port_list\x18\x10 \x01(\x0b\x32\x1f.v2ray.core.common.net.PortList\x12\x12\n\nuser_email\x18\x07 \x03(\t\x12\x13\n\x0binbound_tag\x18\x08 \x03(\t\x12\x10\n\x08protocol\x18\t \x03(\t\x12\x12\n\nattributes\x18\x0f \x01(\t\x12\x16\n\x0e\x64omain_matcher\x18\x11 \x01(\tB\x0c\n\ntarget_tag\"7\n\rBalancingRule\x12\x0b\n\x03tag\x18\x01 \x01(\t\x12\x19\n\x11outbound_selector\x18\x02 \x03(\t\"\x88\x02\n\x06\x43onfig\x12\x45\n\x0f\x64omain_strategy\x18\x01 \x01(\x0e\x32,.v2ray.core.app.router.Config.DomainStrategy\x12\x30\n\x04rule\x18\x02 \x03(\x0b\x32\".v2ray.core.app.router.RoutingRule\x12<\n\x0e\x62\x61lancing_rule\x18\x03 \x03(\x0b\x32$.v2ray.core.app.router.BalancingRule\"G\n\x0e\x44omainStrategy\x12\x08\n\x04\x41sIs\x10\x00\x12\t\n\x05UseIp\x10\x01\x12\x10\n\x0cIpIfNonMatch\x10\x02\x12\x0e\n\nIpOnDemand\x10\x03\x42`\n\x19\x63om.v2ray.core.app.routerP\x01Z)github.com/v2fly/v2ray-core/v4/app/router\xaa\x02\x15V2Ray.Core.App.Routerb\x06proto3'
+  serialized_pb=b'\n\x17\x61pp/router/config.proto\x12\x15v2ray.core.app.router\x1a\x15\x63ommon/net/port.proto\x1a\x18\x63ommon/net/network.proto\"\x8d\x02\n\x06\x44omain\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".v2ray.core.app.router.Domain.Type\x12\r\n\x05value\x18\x02 \x01(\t\x12:\n\tattribute\x18\x03 \x03(\x0b\x32\'.v2ray.core.app.router.Domain.Attribute\x1aR\n\tAttribute\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x14\n\nbool_value\x18\x02 \x01(\x08H\x00\x12\x13\n\tint_value\x18\x03 \x01(\x03H\x00\x42\r\n\x0btyped_value\"2\n\x04Type\x12\t\n\x05Plain\x10\x00\x12\t\n\x05Regex\x10\x01\x12\n\n\x06\x44omain\x10\x02\x12\x08\n\x04\x46ull\x10\x03\"\"\n\x04\x43IDR\x12\n\n\x02ip\x18\x01 \x01(\x0c\x12\x0e\n\x06prefix\x18\x02 \x01(\r\"_\n\x05GeoIP\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12)\n\x04\x63idr\x18\x02 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDR\x12\x15\n\rreverse_match\x18\x03 \x01(\x08\"8\n\tGeoIPList\x12+\n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\"N\n\x07GeoSite\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12-\n\x06\x64omain\x18\x02 \x03(\x0b\x32\x1d.v2ray.core.app.router.Domain\"<\n\x0bGeoSiteList\x12-\n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x1e.v2ray.core.app.router.GeoSite\"\xb8\x05\n\x0bRoutingRule\x12\r\n\x03tag\x18\x01 \x01(\tH\x00\x12\x17\n\rbalancing_tag\x18\x0c \x01(\tH\x00\x12-\n\x06\x64omain\x18\x02 \x03(\x0b\x32\x1d.v2ray.core.app.router.Domain\x12-\n\x04\x63idr\x18\x03 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDRB\x02\x18\x01\x12+\n\x05geoip\x18\n \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\x12\x38\n\nport_range\x18\x04 \x01(\x0b\x32 .v2ray.core.common.net.PortRangeB\x02\x18\x01\x12\x32\n\tport_list\x18\x0e \x01(\x0b\x32\x1f.v2ray.core.common.net.PortList\x12<\n\x0cnetwork_list\x18\x05 \x01(\x0b\x32\".v2ray.core.common.net.NetworkListB\x02\x18\x01\x12\x30\n\x08networks\x18\r \x03(\x0e\x32\x1e.v2ray.core.common.net.Network\x12\x34\n\x0bsource_cidr\x18\x06 \x03(\x0b\x32\x1b.v2ray.core.app.router.CIDRB\x02\x18\x01\x12\x32\n\x0csource_geoip\x18\x0b \x03(\x0b\x32\x1c.v2ray.core.app.router.GeoIP\x12\x39\n\x10source_port_list\x18\x10 \x01(\x0b\x32\x1f.v2ray.core.common.net.PortList\x12\x12\n\nuser_email\x18\x07 \x03(\t\x12\x13\n\x0binbound_tag\x18\x08 \x03(\t\x12\x10\n\x08protocol\x18\t \x03(\t\x12\x12\n\nattributes\x18\x0f \x01(\t\x12\x16\n\x0e\x64omain_matcher\x18\x11 \x01(\tB\x0c\n\ntarget_tag\"I\n\rBalancingRule\x12\x0b\n\x03tag\x18\x01 \x01(\t\x12\x19\n\x11outbound_selector\x18\x02 \x03(\t\x12\x10\n\x08strategy\x18\x03 \x01(\t\"\x88\x02\n\x06\x43onfig\x12\x45\n\x0f\x64omain_strategy\x18\x01 \x01(\x0e\x32,.v2ray.core.app.router.Config.DomainStrategy\x12\x30\n\x04rule\x18\x02 \x03(\x0b\x32\".v2ray.core.app.router.RoutingRule\x12<\n\x0e\x62\x61lancing_rule\x18\x03 \x03(\x0b\x32$.v2ray.core.app.router.BalancingRule\"G\n\x0e\x44omainStrategy\x12\x08\n\x04\x41sIs\x10\x00\x12\t\n\x05UseIp\x10\x01\x12\x10\n\x0cIpIfNonMatch\x10\x02\x12\x0e\n\nIpOnDemand\x10\x03\x42`\n\x19\x63om.v2ray.core.app.routerP\x01Z)github.com/v2fly/v2ray-core/v4/app/router\xaa\x02\x15V2Ray.Core.App.Routerb\x06proto3'
   ,
   dependencies=[common_dot_net_dot_port__pb2.DESCRIPTOR,common_dot_net_dot_network__pb2.DESCRIPTOR,])
 
@@ -92,8 +92,8 @@ _CONFIG_DOMAINSTRATEGY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1654,
-  serialized_end=1725,
+  serialized_start=1672,
+  serialized_end=1743,
 )
 _sym_db.RegisterEnumDescriptor(_CONFIG_DOMAINSTRATEGY)
 
@@ -554,6 +554,13 @@ _BALANCINGRULE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='strategy', full_name='v2ray.core.app.router.BalancingRule.strategy', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -567,7 +574,7 @@ _BALANCINGRULE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1403,
-  serialized_end=1458,
+  serialized_end=1476,
 )
 
 
@@ -613,8 +620,8 @@ _CONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1461,
-  serialized_end=1725,
+  serialized_start=1479,
+  serialized_end=1743,
 )
 
 _DOMAIN_ATTRIBUTE.containing_type = _DOMAIN

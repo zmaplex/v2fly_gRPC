@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n%com.v2ray.core.transport.internet.tlsP\001Z5github.com/v2fly/v2ray-core/v4/transport/internet/tls\252\002!V2Ray.Core.Transport.Internet.Tls',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n#transport/internet/tls/config.proto\x12!v2ray.core.transport.internet.tls\"\xba\x01\n\x0b\x43\x65rtificate\x12\x13\n\x0b\x43\x65rtificate\x18\x01 \x01(\x0c\x12\x0b\n\x03Key\x18\x02 \x01(\x0c\x12\x43\n\x05usage\x18\x03 \x01(\x0e\x32\x34.v2ray.core.transport.internet.tls.Certificate.Usage\"D\n\x05Usage\x12\x10\n\x0c\x45NCIPHERMENT\x10\x00\x12\x14\n\x10\x41UTHORITY_VERIFY\x10\x01\x12\x13\n\x0f\x41UTHORITY_ISSUE\x10\x02\"\xd1\x01\n\x06\x43onfig\x12\x16\n\x0e\x61llow_insecure\x18\x01 \x01(\x08\x12\x43\n\x0b\x63\x65rtificate\x18\x02 \x03(\x0b\x32..v2ray.core.transport.internet.tls.Certificate\x12\x13\n\x0bserver_name\x18\x03 \x01(\t\x12\x15\n\rnext_protocol\x18\x04 \x03(\t\x12!\n\x19\x65nable_session_resumption\x18\x05 \x01(\x08\x12\x1b\n\x13\x64isable_system_root\x18\x06 \x01(\x08\x42\x84\x01\n%com.v2ray.core.transport.internet.tlsP\x01Z5github.com/v2fly/v2ray-core/v4/transport/internet/tls\xaa\x02!V2Ray.Core.Transport.Internet.Tlsb\x06proto3'
+  serialized_pb=b'\n#transport/internet/tls/config.proto\x12!v2ray.core.transport.internet.tls\"\xba\x01\n\x0b\x43\x65rtificate\x12\x13\n\x0b\x43\x65rtificate\x18\x01 \x01(\x0c\x12\x0b\n\x03Key\x18\x02 \x01(\x0c\x12\x43\n\x05usage\x18\x03 \x01(\x0e\x32\x34.v2ray.core.transport.internet.tls.Certificate.Usage\"D\n\x05Usage\x12\x10\n\x0c\x45NCIPHERMENT\x10\x00\x12\x14\n\x10\x41UTHORITY_VERIFY\x10\x01\x12\x13\n\x0f\x41UTHORITY_ISSUE\x10\x02\"\xff\x01\n\x06\x43onfig\x12\x16\n\x0e\x61llow_insecure\x18\x01 \x01(\x08\x12\x43\n\x0b\x63\x65rtificate\x18\x02 \x03(\x0b\x32..v2ray.core.transport.internet.tls.Certificate\x12\x13\n\x0bserver_name\x18\x03 \x01(\t\x12\x15\n\rnext_protocol\x18\x04 \x03(\t\x12!\n\x19\x65nable_session_resumption\x18\x05 \x01(\x08\x12\x1b\n\x13\x64isable_system_root\x18\x06 \x01(\x08\x12,\n$pinned_peer_certificate_chain_sha256\x18\x07 \x03(\x0c\x42\x84\x01\n%com.v2ray.core.transport.internet.tlsP\x01Z5github.com/v2fly/v2ray-core/v4/transport/internet/tls\xaa\x02!V2Ray.Core.Transport.Internet.Tlsb\x06proto3'
 )
 
 
@@ -152,6 +152,13 @@ _CONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pinned_peer_certificate_chain_sha256', full_name='v2ray.core.transport.internet.tls.Config.pinned_peer_certificate_chain_sha256', index=6,
+      number=7, type=12, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -165,7 +172,7 @@ _CONFIG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=264,
-  serialized_end=473,
+  serialized_end=519,
 )
 
 _CERTIFICATE.fields_by_name['usage'].enum_type = _CERTIFICATE_USAGE
