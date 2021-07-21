@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\036com.v2ray.core.app.observatoryP\001Z.github.com/v2fly/v2ray-core/v4/app/observatory\252\002\032V2Ray.Core.App.Observatory',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x61pp/observatory/config.proto\x12\x1av2ray.core.app.observatory\"O\n\x11ObservationResult\x12:\n\x06status\x18\x01 \x03(\x0b\x32*.v2ray.core.app.observatory.OutboundStatus\"\x8e\x01\n\x0eOutboundStatus\x12\r\n\x05\x61live\x18\x01 \x01(\x08\x12\r\n\x05\x64\x65lay\x18\x02 \x01(\x03\x12\x19\n\x11last_error_reason\x18\x03 \x01(\t\x12\x14\n\x0coutbound_tag\x18\x04 \x01(\t\x12\x16\n\x0elast_seen_time\x18\x05 \x01(\x03\x12\x15\n\rlast_try_time\x18\x06 \x01(\x03\"F\n\x0bProbeResult\x12\r\n\x05\x61live\x18\x01 \x01(\x08\x12\r\n\x05\x64\x65lay\x18\x02 \x01(\x03\x12\x19\n\x11last_error_reason\x18\x03 \x01(\t\"#\n\tIntensity\x12\x16\n\x0eprobe_interval\x18\x01 \x01(\r\"\"\n\x06\x43onfig\x12\x18\n\x10subject_selector\x18\x02 \x03(\tBo\n\x1e\x63om.v2ray.core.app.observatoryP\x01Z.github.com/v2fly/v2ray-core/v4/app/observatory\xaa\x02\x1aV2Ray.Core.App.Observatoryb\x06proto3'
+  serialized_pb=b'\n\x1c\x61pp/observatory/config.proto\x12\x1av2ray.core.app.observatory\"O\n\x11ObservationResult\x12:\n\x06status\x18\x01 \x03(\x0b\x32*.v2ray.core.app.observatory.OutboundStatus\"\x8e\x01\n\x0eOutboundStatus\x12\r\n\x05\x61live\x18\x01 \x01(\x08\x12\r\n\x05\x64\x65lay\x18\x02 \x01(\x03\x12\x19\n\x11last_error_reason\x18\x03 \x01(\t\x12\x14\n\x0coutbound_tag\x18\x04 \x01(\t\x12\x16\n\x0elast_seen_time\x18\x05 \x01(\x03\x12\x15\n\rlast_try_time\x18\x06 \x01(\x03\"F\n\x0bProbeResult\x12\r\n\x05\x61live\x18\x01 \x01(\x08\x12\r\n\x05\x64\x65lay\x18\x02 \x01(\x03\x12\x19\n\x11last_error_reason\x18\x03 \x01(\t\"#\n\tIntensity\x12\x16\n\x0eprobe_interval\x18\x01 \x01(\r\"M\n\x06\x43onfig\x12\x18\n\x10subject_selector\x18\x02 \x03(\t\x12\x11\n\tprobe_url\x18\x03 \x01(\t\x12\x16\n\x0eprobe_interval\x18\x04 \x01(\x03\x42o\n\x1e\x63om.v2ray.core.app.observatoryP\x01Z.github.com/v2fly/v2ray-core/v4/app/observatory\xaa\x02\x1aV2Ray.Core.App.Observatoryb\x06proto3'
 )
 
 
@@ -217,6 +217,20 @@ _CONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='probe_url', full_name='v2ray.core.app.observatory.Config.probe_url', index=1,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='probe_interval', full_name='v2ray.core.app.observatory.Config.probe_interval', index=2,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -230,7 +244,7 @@ _CONFIG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=395,
-  serialized_end=429,
+  serialized_end=472,
 )
 
 _OBSERVATIONRESULT.fields_by_name['status'].message_type = _OUTBOUNDSTATUS
