@@ -19,6 +19,11 @@ class LoggerServiceStub(object):
                 request_serializer=app_dot_log_dot_command_dot_config__pb2.RestartLoggerRequest.SerializeToString,
                 response_deserializer=app_dot_log_dot_command_dot_config__pb2.RestartLoggerResponse.FromString,
                 )
+        self.FollowLog = channel.unary_stream(
+                '/v2ray.core.app.log.command.LoggerService/FollowLog',
+                request_serializer=app_dot_log_dot_command_dot_config__pb2.FollowLogRequest.SerializeToString,
+                response_deserializer=app_dot_log_dot_command_dot_config__pb2.FollowLogResponse.FromString,
+                )
 
 
 class LoggerServiceServicer(object):
@@ -30,6 +35,13 @@ class LoggerServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def FollowLog(self, request, context):
+        """Unstable interface
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_LoggerServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -37,6 +49,11 @@ def add_LoggerServiceServicer_to_server(servicer, server):
                     servicer.RestartLogger,
                     request_deserializer=app_dot_log_dot_command_dot_config__pb2.RestartLoggerRequest.FromString,
                     response_serializer=app_dot_log_dot_command_dot_config__pb2.RestartLoggerResponse.SerializeToString,
+            ),
+            'FollowLog': grpc.unary_stream_rpc_method_handler(
+                    servicer.FollowLog,
+                    request_deserializer=app_dot_log_dot_command_dot_config__pb2.FollowLogRequest.FromString,
+                    response_serializer=app_dot_log_dot_command_dot_config__pb2.FollowLogResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -62,5 +79,22 @@ class LoggerService(object):
         return grpc.experimental.unary_unary(request, target, '/v2ray.core.app.log.command.LoggerService/RestartLogger',
             app_dot_log_dot_command_dot_config__pb2.RestartLoggerRequest.SerializeToString,
             app_dot_log_dot_command_dot_config__pb2.RestartLoggerResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FollowLog(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/v2ray.core.app.log.command.LoggerService/FollowLog',
+            app_dot_log_dot_command_dot_config__pb2.FollowLogRequest.SerializeToString,
+            app_dot_log_dot_command_dot_config__pb2.FollowLogResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
